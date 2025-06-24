@@ -2,6 +2,7 @@ import React from 'react'
 import '../Style/Home.css'
 import Content from './Content'
 import Footer from './footer'
+import Cartform from '../Components/Cartform'
 
 const Home=()=> {
   return (
@@ -17,6 +18,7 @@ const Home=()=> {
           </div>
         </div>
       </div>
+      <Cartform/>
       <Content/>
       <Footer/>
     </div>
