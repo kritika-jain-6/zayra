@@ -1,7 +1,29 @@
-import React from 'react'
+import React from 'react';
+import Contact from './Components/Contact';
+import Loginform from './Components/Loginform';
+import Home from './Components/Home';
+import Privacy from './Components/Privacy';
+import Signup from './Components/Signup';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Navbar from './Components/Navbar';
 
-export default function App() {
+
+const  App=()=> {
   return (
-    <div>App</div>
+    <div>
+      <Router>
+        <Navbar/>
+        <Routes>
+          <Route path='/' element={<Home/>}/>
+          <Route path='/privacy' element={<Privacy/>}/>
+          <Route path='/loginform' element={<Loginform/>}/>
+          <Route path='/contact' element={<Contact/>}/>
+          <Route path='/signup' element={<Signup/>}/>
+        </Routes>
+      </Router>
+
+    </div>
   )
 }
+
+export default App;
