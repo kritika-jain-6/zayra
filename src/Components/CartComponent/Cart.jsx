@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "../styles/cart.css";
 
-
 const Cart = ({ cart, setCart, handlechange }) => {
   const [price, setPrice] = useState(0);
 
@@ -24,7 +23,10 @@ const Cart = ({ cart, setCart, handlechange }) => {
       <article>
         {cart?.map((item) => (
           <div className="cart_box" key={item.id}>
-            <div className="cart_img"></div>
+            <div className="cart_img">
+              <img src={item.img} alt="img" />
+              <p>{item.title} </p>
+            </div>
             <div className="add_subtraction">
               <button onClick={() => handlechange(item, +1)}>+</button>
               <button>{item.amount}</button>
